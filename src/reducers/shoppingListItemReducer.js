@@ -1,7 +1,9 @@
-export default function shoppingListItemReducer(state = {
-  items: [], 
-  users: [ 'initial user' ]
-}, action) {
+const defaultState = {
+  items: [],
+  users: [ 'initial user' ],
+}
+
+const shoppingListItemReducer = (state = defaultState, action) => {
 
   switch(action.type) {
 
@@ -19,3 +21,5 @@ export default function shoppingListItemReducer(state = {
       return state;
   }
 };
+
+export default shoppingListItemReducer
